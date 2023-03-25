@@ -6,7 +6,7 @@ public class LoginDto {
 	
 	public LoginDto() {
 		super();
-		
+	//this is comment from github	
 	}
 	public String getUsername() {
 		return username;
