@@ -1,1 +1,4 @@
 # restApiPractice
+registerRecord
+listOfrecord
+retrievingTwoTableRecord
