@@ -57,5 +57,21 @@ class LoginServiceImplTest {
 		//assert
 		assertEquals("usersave",msg);
 	}
+	
+	@Test
+	void testuserLoginRegisterIfPresent() {
+		//arrange
+		LoginDto loginDto=new LoginDto();
+		loginDto.setUsername("rabin");
+		loginDto.setPassword("1234");
+		when(loginServiceImpl.checkUserExst(any())).thenReturn(true);
+		when(loginRepository.save(any(LoginEntity.class))).thenReturn(loginEntity);
+		
+		//act
+		String msg=loginServiceImpl.userLoginRegister(loginDto);
+		
+		//assert
+		assertEquals("already exist",msg);
+	}
 
 }
